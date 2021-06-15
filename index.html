@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+<head>
+    <style>
+        .hljs-1 {
+            display: block;
+            overflow-x: auto;
+            background: #080705;
+            color: #f7eecf;
+            padding: .5em;
+            font-weight: 300;
+            font-size: 20px;
+            font-family: monospace;
+        }
+
+        .hljs-2 {
+            display: block;
+            overflow-x: auto;
+            background: #0e0c09;
+            color: #cfc399;
+            padding-top: 15px;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            margin-top: -14px;
+            font-weight: 300;
+            font-size: 16px;
+            font-family: monospace;
+        }
+
+        .title {
+            color: #c5c5c5;
+            margin-left: 10px;
+            font-family: monospace;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .wrapper {
+            height: 50px;
+            /*This part is important for centering*/
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        .buttonhold {
+            background: #1a150a;
+            background-size: cover;
+            color: #f7eecf;
+            padding: .5em;
+            font-weight: 300;
+            font-size: 16px;
+            font-family: monospace;
+        }
+
+        .buttons {
+            float: right;
+            z-index: 100;
+            top: 10px;
+            color: rgb(19, 8, 8);
+            cursor: pointer;
+        }
+
+        .downloadbutton {
+            position: relative;
+            margin-left: 0px;
+            z-index: 100;
+            right: 0px;
+            color: rgb(19, 8, 8);
+            cursor: pointer;
+        }
+
+        #downloadbutton {
+            color:#8097b3;
+        }
+        #downloadbutton:hover {
+            color: white;
+        }
+        button {
+            background: transparent;
+            border: 0px;
+        }
+
+        .typing-demo {
+            color: rgb(255, 145, 0);
+            width: 6ch;
+            animation: typing 1.5s steps(6), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-family: monospace;
+            font-size: 38px;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+        }
+            
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: hsl(0, 0%, 0%);">
+    <script>
+        const copyToClipboard = str => {
+            const el = document.createElement('textarea');
+            el.value = str;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert("Copied " + str)
+        }
+    </script>
+
+    <div class="wrapper">
+        <div class="typing-demo">
+            HCBB X
+        </div>
+    </div>
+
+    <h1></h1>
+    <div  class="buttonhold">
+        Discord Invite
+        <a href="https://discord.gg/MUVmpZG7td"><button class="downloadbutton">
+            <div id="downloadbutton"><i class="fa fa-arrow-circle-down fa-lg"></i></div>
+        </button></a>
+    </div>
+
+    <!-- LIBRARY -->
+    <h1></h1>
+    <h1 class="hljs-1"><span style = "color: rgb(255, 145, 0)">Main</span></h1>
+    <h1 class="hljs-2">
+        - Master Switch: turns the whole Script ON/OFF <br><br>
+        - FOV: modifies your camera FOV (only while batting) <br>
+        &nbsp; > FOV Value: value you want your FOV to be<br><br>
+        - SPEED: modifies your LocalPlayer walk speed <br>
+        &nbsp; > Speed Boost: distance in studs added every physics simulation
+    </h1>
+
+    <h1></h1>
+    <h1 class="hljs-1"><span style = "color: rgb(255, 145, 0)">Aimbot</span></h1>
+    <h1 class="hljs-2">
+        - Aimbot: turns aimbot ON/OFF <br><br>
+        - Mode (Mouse, Key): mode for input method of aimbot <br>
+        &nbsp; > "Mouse": uses the Mouse RightClick as input<br>
+        &nbsp; > "Key": uses the Keybind below as input<br><br>
+        - Key: keybind for the mode "Key" above <br><br>
+        - Smoothness: smoothing of mouse movement (higher = faster) <br><br>
+        - Offsets: offsets the aiming target <br>
+        &nbsp; > Offset X: (higher = right, lower = left)<br>
+        &nbsp; > Offset Y: (higher = down, lower = up)<br><br>
+        - Ball Check: detects if ball is in strikezone (doesn't predict !)<br><br>
+        - Auto Hit: hits ball at the right timing (start aimlocking when ball esp appears)<br>
+        &nbsp; > Auto Hit Delay: dynamic delay calculated using time and speed of ball (higher = sooner, lower = later)
+    </h1>
+
+    <h1></h1>
+    <h1 class="hljs-1"><span style = "color: rgb(255, 145, 0)">Visuals (2D Drawings)</span></h1>
+    <h1 class="hljs-2">
+        - Ball ESP: draws a 2D circle around the ball <br>
+        &nbsp; > Color: color of the circle<br><br>
+        - Strikezone ESP: draws a 2D rectangle around the strikezone<br>
+        &nbsp; > Color: color of the rectangle
+    </h1>
+
+    <h1></h1>
+    <h1 class="hljs-1"><span style = "color: rgb(255, 145, 0)">Settings</span></h1>
+    <h1 class="hljs-2">
+        PS: "End" key to toggle UI<br><br><br>
+        - UI Position: position of the menu on screen<br><br>
+        - Save Settings: saves current option states<br><br>
+        - Destroy: exists HCBB X safely
+    </h1>
+
+    <h1>
+        <br>
+        <br>
+    </h1>
+</body>
+
+</html>
