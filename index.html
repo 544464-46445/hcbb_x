@@ -97,6 +97,9 @@
 
         .img-diff {
             border: 1px solid rgb(95, 66, 27);
+            -moz-box-shadow: 0 0 5px rgb(156, 104, 35);
+            -webkit-box-shadow: 0 0 5px rgb(255, 145, 0);
+            box-shadow: 0px 0px 5px rgb(255, 145, 0);
         }
 
         @keyframes typing {
@@ -168,7 +171,7 @@
         &nbsp; > Offset X: (higher = right, lower = left)<br>
         &nbsp; > Offset Y: (higher = down, lower = up)<br><br>
         - Ball Check: detects if ball is in strikezone (doesn't predict !)<br><br>
-        - Auto Hit: hits ball at the right timing (start aimlocking when ball esp appears)<br>
+        - Auto Hit: hits ball at the right timing (start aimlocking after ball esp appears)<br>
         &nbsp; > Auto Hit Delay: dynamic delay calculated using time and speed of ball (higher = sooner, lower = later)
     </h1>
 
